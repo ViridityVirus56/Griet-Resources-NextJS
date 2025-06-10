@@ -19,16 +19,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white h-screen flex flex-col`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white h-screen flex flex-col overflow-y-hidden`}>
         <div className="w-full bg-gray-800 p-4 flex justify-between items-center mb-2">
           <div className="text-lg font-bold">My App</div>
           <nav className="flex gap-4">
             <a href="/home" className="text-gray-300 hover:text-white">Home</a>
             <a href="/login" className="text-gray-300 hover:text-white">Login</a>
-            <a href="/about" className="text-gray-300 hover:text-white">About</a> 
           </nav>
         </div>
-        <div className="flex-1 overflow-y-auto w-100vw">
+        <div className="flex flex-1 overflow-y-auto w-100vw justify-center items-center">
           {children}
         </div>
       </body>

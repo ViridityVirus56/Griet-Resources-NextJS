@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <div className="grid grid-cols-5 gap-4 my-2 mx-4">
             {subjects.map((item) => (
-                <Card key={item} href={`/subjects/${item}`}>
+                <Card link={true} key={item} href={`/subjects/${item}`}>
                     <h2 className="text-2xl">{item}</h2>
                 </Card>
             ))}
